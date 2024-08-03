@@ -1,0 +1,60 @@
+.dashboard {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .progress-section, .reminders-section {
+    margin-bottom: 20px;
+  }
+  
+  .course-progress {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .course-progress h3 {
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  
+  .progress {
+    height: 20px;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .progress.low {
+    background-color: #f44336; /* Red for low progress */
+  }
+  
+  .progress.medium {
+    background-color: #ff9800; /* Orange for medium progress */
+  }
+  
+  .progress.high {
+    background-color: #4caf50; /* Green for high progress */
+  }
+  
+  .reminders-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .reminders-section li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }

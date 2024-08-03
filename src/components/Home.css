@@ -1,0 +1,93 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+}
+
+.banner {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex: 1;
+}
+
+.progress-section, .reminders-section {
+  width: 48%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.divider {
+  width: 2%;
+  background-color: #ddd;
+  height: auto;
+}
+
+.course-progress {
+  margin-bottom: 15px;
+}
+
+.course-progress h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.progress.low {
+  background-color: #ff4d4d;
+}
+
+.progress.medium {
+  background-color: #ffcc00;
+}
+
+.progress.high {
+  background-color: #4caf50;
+}
+
+.reminders-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reminders-section li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.reminders-section li p {
+  margin: 0;
+}

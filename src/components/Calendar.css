@@ -1,0 +1,66 @@
+.calendar-container {
+  padding: 20px;
+}
+
+.fc .fc-toolbar {
+  margin-bottom: 20px;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.fc .fc-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fc .fc-button:hover {
+  background-color: #0056b3;
+}
+
+.fc .fc-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.fc .fc-daygrid-event, .fc .fc-timegrid-event {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+
+.fc .fc-daygrid-event {
+  background-color: #007bff;
+}
+
+.fc .fc-timegrid-event {
+  background-color: #007bff;
+}
+
+.fc .fc-timegrid-axis {
+  background-color: #f0f0f0;
+}
+
+.fc .fc-timegrid-slot {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.fc .fc-timegrid-slot-label {
+  font-weight: bold;
+}
+
+.fc .fc-timegrid-slot-lane {
+  background-color: #ffffff;
+}
+
+.fc .fc-timegrid-slot-lane:hover {
+  background-color: #f0f0f0;
+}
