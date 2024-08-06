@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Forum.css';
-
+import Sidebar from './Sidebar';
 const Forum = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
@@ -14,6 +14,7 @@ const Forum = () => {
 
   return (
     <div className="forum-container">
+      <Sidebar/>
       <h1>Forum</h1>
       <div className="chatroom">
         <div className="messages">

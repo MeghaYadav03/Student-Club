@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resources.css';
-
+import Sidebar from './Sidebar';
 const resources = [
   {
     name: 'FreeCodeCamp',
@@ -37,6 +37,7 @@ const resources = [
 const Resources = () => {
   return (
     <div className="resources-container">
+      <Sidebar/>
       <h1>Resources</h1>
       <div className="resources-grid">
         {resources.map((resource, index) => (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Dashboard.css';
+    import './Dashboard.css';
+    import Sidebar from './Sidebar';
 
 const Dashboard = ({ courses = {}, completedUnits = {}, events = [] }) => {
   const [progress, setProgress] = useState({});
@@ -26,6 +27,7 @@ const Dashboard = ({ courses = {}, completedUnits = {}, events = [] }) => {
 
   return (
     <div className="dashboard">
+        <Sidebar/>
       <h1>Dashboard</h1>
       <div className="progress-section">
         <h2>Course Progress</h2>

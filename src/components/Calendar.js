@@ -4,7 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import './Calendar.css';
-
+import Sidebar from './Sidebar';
 const MyCalendar = ({ events, setEvents }) => {
   const handleDateSelect = (selectInfo) => {
     let title = prompt('Please enter a new title for your event');
@@ -37,6 +37,7 @@ const MyCalendar = ({ events, setEvents }) => {
 
   return (
     <div className="calendar-container">
+      <Sidebar/>
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView="timeGridWeek"

@@ -1,53 +1,30 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Home from './components/Home';
-import SignUp from './components/SignUp';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+import LandingPage from './components/LandingPage';
 import SignIn from './components/SignIn';
-import Forum from './components/Forum'; // Import Forum component
+import SignUp from './components/SignUp';
+import Home from './components/Home';
+import MyCourses from './components/MyCourses';
+import Forum from './components/Forum';
 import Calendar from './components/Calendar';
 import Assignment from './components/Assignment';
-import Resources from './components/Resources';
-import './App.css';
-import MyCourses from './components/MyCourses';
-
-function AppContent() {
-  const [completedUnits, setCompletedUnits] = useState({});
-  const [events, setEvents] = useState([]); // Initialize events state
-
-  const courses = {
-    'Python': ['Introduction', 'Data Types', 'Control Flow', 'Functions', 'Modules'],
-    'React': ['JSX', 'Components', 'State', 'Props', 'Lifecycle Methods'],
-    'JavaScript': ['Syntax', 'DOM Manipulation', 'ES6', 'Asynchronous Programming', 'APIs'],
-    'HTML': ['Elements', 'Attributes', 'Forms', 'Media', 'Semantics'],
-    'CSS': ['Selectors', 'Box Model', 'Flexbox', 'Grid', 'Animations'],
-    'C++': ['Syntax', 'OOP', 'STL', 'Memory Management', 'Concurrency']
-  };
-
-  return (
-    <div className="App">
-      <Sidebar />
-      <div className="content">
-        <Routes>
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/" element={<Home courses={courses} completedUnits={completedUnits} events={events} />} />
-          <Route path="/forum" element={<Forum />} />
-          <Route path="/calendar" element={<Calendar events={events} setEvents={setEvents} />} />
-          <Route path="/assignment" element={<Assignment />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/courses" element={<MyCourses courses={courses} completedUnits={completedUnits} setCompletedUnits={setCompletedUnits} />} />
-          <Route path="*" element={<Navigate to="/signin" />} /> {/* Redirect to SignIn for unknown routes */}
-        </Routes>
-      </div>
-    </div>
-  );
-}
 
 function App() {
   return (
     <Router>
-      <AppContent />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/mycourses" element={<MyCourses />} />
+          <Route path="/forum" element={<Forum />} />
+          <Route path="/calendar" element={<Calendar />} />
+          <Route path="/assignment" element={<Assignment />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

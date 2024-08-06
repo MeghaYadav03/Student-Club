@@ -1,9 +1,10 @@
 import React from 'react';
 import './Assignment.css';
-
+import Sidebar from './Sidebar';
 const Assignment = () => {
   return (
     <div className="assignments">
+      <Sidebar/>
       <h1>Assignments</h1>
       <div className="semesters">
         <button className="semester active">Semester 01</button>

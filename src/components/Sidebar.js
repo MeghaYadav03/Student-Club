@@ -12,13 +12,13 @@ function Sidebar() {
       </div>
       <ul>
         <li>
-          <Link to="/">
+          <Link to="/home">
             <span className="icon">🏠</span>
             <span className="text">Home</span>
           </Link>
         </li>
         <li>
-          <Link to="/courses">
+          <Link to="/mycourses">
             <span className="icon">📚</span>
             <span className="text">My Courses</span>
           </Link>

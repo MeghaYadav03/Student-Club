@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css';
-
+import Sidebar from './Sidebar';
 const Home = ({ courses = {}, completedUnits = {}, events = [] }) => {
   const [progress, setProgress] = useState({});
 
@@ -26,6 +26,7 @@ const Home = ({ courses = {}, completedUnits = {}, events = [] }) => {
 
   return (
     <div className="home">
+      <Sidebar/>
       <div className="banner">
         <h1>Welcome Back, Pranav</h1>
         <img src="https://img.freepik.com/free-vector/cute-pastel-animal-twitter-header_23-2149278601.jpg" alt="Banner" />

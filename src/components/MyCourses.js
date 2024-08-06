@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './MyCourses.css';
+import Sidebar from './Sidebar';
 
 const MyCourses = ({ courses = {}, completedUnits = {}, setCompletedUnits }) => {
   const [selectedCourses, setSelectedCourses] = useState([]);
@@ -34,6 +35,7 @@ const MyCourses = ({ courses = {}, completedUnits = {}, setCompletedUnits }) => 
 
   return (
     <div className="my-courses">
+      <Sidebar />
       <h1>My Courses</h1>
       <div className="course-options">
         {Object.keys(courses).map(course => (
