@@ -1,6 +1,7 @@
-.App {
+/*.App {
   display: flex;
   flex-direction: column;
+  background-color: #f0f0f0;
 }
 
 .menu-button {
@@ -33,6 +34,4 @@
   margin-left: 0;
 }
 
-.sidebar-container.active + .content {
-  margin-left: 250px;
-}
+*/

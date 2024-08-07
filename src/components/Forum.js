@@ -14,7 +14,7 @@ const Forum = () => {
 
   return (
     <div className="forum-container">
-      <Sidebar/>
+     
       <h1>Forum</h1>
       <div className="chatroom">
         <div className="messages">

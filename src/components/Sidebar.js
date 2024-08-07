@@ -24,9 +24,9 @@ function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link to="/assignment">
+          <Link to="/resources">
             <span className="icon">📝</span>
-            <span className="text">Assignments</span>
+            <span className="text">Resources</span>
           </Link>
         </li>
         <li>
@@ -36,17 +36,12 @@ function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link to="/forum">
+          <Link to="/videomeet">
             <span className="icon">💬</span>
-            <span className="text">Forum</span>
+            <span className="text">Video Meet</span>
           </Link>
         </li>
-        <li>
-          <Link to="/settings">
-            <span className="icon">⚙️</span>
-            <span className="text">Settings</span>
-          </Link>
-        </li>
+       
       </ul>
     </div>
   );

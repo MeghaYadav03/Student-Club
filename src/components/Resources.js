@@ -37,7 +37,7 @@ const resources = [
 const Resources = () => {
   return (
     <div className="resources-container">
-      <Sidebar/>
+     <Sidebar/>
       <h1>Resources</h1>
       <div className="resources-grid">
         {resources.map((resource, index) => (

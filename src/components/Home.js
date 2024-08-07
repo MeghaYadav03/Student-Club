@@ -1,65 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Home.css';
+import Dashboard from './Dashboard';
 import Sidebar from './Sidebar';
-const Home = ({ courses = {}, completedUnits = {}, events = [] }) => {
-  const [progress, setProgress] = useState({});
+import News from './News';
 
-  useEffect(() => {
-    const calculateProgress = () => {
-      const newProgress = {};
-      Object.keys(courses).forEach(course => {
-        const totalUnits = courses[course].length;
-        const completedCount = Object.values(completedUnits[course] || {}).filter(status => status === 'complete').length;
-        newProgress[course] = (completedCount / totalUnits) * 100;
-      });
-      setProgress(newProgress);
-    };
+const eventsData = [
+  { title: 'Meeting with team', start: new Date() },
+  { title: 'Project deadline', start: new Date(Date.now() + 86400000) }
+];
 
-    calculateProgress();
-  }, [courses, completedUnits]);
-
-  const getProgressClass = (percentage) => {
-    if (percentage < 33) return 'low';
-    if (percentage < 66) return 'medium';
-    return 'high';
-  };
-
+const Home = ({ progress }) => {
   return (
     <div className="home">
-      <Sidebar/>
-      <div className="banner">
-        <h1>Welcome Back, Pranav</h1>
-        <img src="https://img.freepik.com/free-vector/cute-pastel-animal-twitter-header_23-2149278601.jpg" alt="Banner" />
+      <Sidebar className="sidebar" />
+      <div className="main-content">
+        <div className="header">
+          <div className="image-section">
+            <img src="../coding-club-steam.png" alt="Header Image" className="header-image" />
+          </div>
+          <div className="reminders-section">
+            <h2>Reminders</h2>
+            <ul>
+              {eventsData.length > 0 ? (
+                eventsData.map((event, index) => (
+                  <li key={index} className="reminder-item">
+                    <p>{event.title}</p>
+                    <p>{new Date(event.start).toLocaleString()}</p>
+                  </li>
+                ))
+              ) : (
+                <p>No events available</p>
+              )}
+            </ul>
+          </div>
+        </div>
+        <div className="dashboard-section">
+          <Dashboard progress={progress} />
+        </div>
+       
       </div>
-      <div className="content">
-        <div className="progress-section">
-          <h2>Course Progress</h2>
-          {Object.keys(progress).map(course => (
-            <div key={course} className="course-progress">
-              <h3>{course}</h3>
-              <div className="progress-bar">
-                <div className={`progress ${getProgressClass(progress[course])}`} style={{ width: `${progress[course]}%` }}></div>
-              </div>
-              <p>{progress[course].toFixed(2)}% completed</p>
-            </div>
-          ))}
-        </div>
-        <div className="divider"></div>
-        <div className="reminders-section">
-          <h2>Reminders</h2>
-          <ul>
-            {events.length > 0 ? (
-              events.map((event, index) => (
-                <li key={index}>
-                  <p>{event.title}</p>
-                  <p>{new Date(event.start).toLocaleString()}</p>
-                </li>
-              ))
-            ) : (
-              <p>No events available</p>
-            )}
-          </ul>
-        </div>
+      <div className="news-section">
+        <News />
       </div>
     </div>
   );
